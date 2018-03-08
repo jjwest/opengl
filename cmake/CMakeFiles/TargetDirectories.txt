@@ -1,0 +1,3 @@
+/home/jonas/opengl/triangle/cmake/CMakeFiles/edit_cache.dir
+/home/jonas/opengl/triangle/cmake/CMakeFiles/shadermania.dir
+/home/jonas/opengl/triangle/cmake/CMakeFiles/rebuild_cache.dir

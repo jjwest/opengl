@@ -8,7 +8,6 @@ file(GLOB SOURCES "src/*.c*")
 add_executable(${TARGET} ${SOURCES})
 
 find_package(SDL2 REQUIRED)
-find_package(SDL2_image REQUIRED)
 find_package(OpenGL REQUIRED)
 
 set(CMAKE_EXE_LINKER_FLAGS ${CMAKE_EXE_LINKER_FLAGS} "-lX11 -lpthread -lXrandr -lXi")
@@ -16,12 +15,10 @@ set(CMAKE_EXE_LINKER_FLAGS ${CMAKE_EXE_LINKER_FLAGS} "-lX11 -lpthread -lXrandr -
 target_include_directories(
   ${TARGET} PUBLIC
   ${SDL2_INCLUDE_DIR}
-  ${SDL2_IMAGE_INCLUDE_DIR}
   ${OPENGL_gl_INCLUDE_DIR}
   "${CMAKE_CURRENT_SOURCE_DIR}/include"
 )
 
 target_link_libraries(${TARGET} ${SDL2_LIBRARY}
-                                ${SDL2_IMAGE_LIBRARIES}
 								${CMAKE_DL_LIBS}
 								${OPENGL_gl_LIBRARY})

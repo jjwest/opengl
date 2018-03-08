@@ -3,7 +3,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
 
 #include <iostream>
 
@@ -270,7 +269,6 @@ int main()
     glDeleteBuffers(1, &EBO);
 
     SDL_DestroyWindow(window);
-    IMG_Quit();
     SDL_Quit();
 
     return 0;
